@@ -6,4 +6,6 @@ public interface IndexDao {
 
     void annotationQuery();
 
+    void aroundAdvice(String name, String remark);
+
 }

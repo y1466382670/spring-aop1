@@ -15,4 +15,10 @@ public class IndexDaoImpl implements IndexDao {
         System.out.println("annotation注解横切执行方法");
     }
 
+
+    public void aroundAdvice(String name, String remark) {
+        System.out.println("name="+name);
+        System.out.println("remark="+remark);
+    }
+
 }

@@ -10,9 +10,12 @@ public class AopMainTest {
     public static void main(String[] args) {
         AnnotationConfigApplicationContext annotationConfigApplicationContext =
                 new AnnotationConfigApplicationContext(AppConfig.class);
-        IndexDaoImpl indexdao = annotationConfigApplicationContext.getBean(IndexDaoImpl.class);
+        IndexDao indexdao = annotationConfigApplicationContext.getBean(IndexDaoImpl.class);
         System.out.println(indexdao instanceof IndexDaoImpl);
         indexdao.query();
+        System.out.println("========================================");
         indexdao.annotationQuery();
+        System.out.println("========================================");
+        indexdao.aroundAdvice("yan","hello,");
     }
 }
